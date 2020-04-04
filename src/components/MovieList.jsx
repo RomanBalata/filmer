@@ -165,7 +165,11 @@ const Button = styled.button`
   }
 `;
 const Image = styled.img`
+  min-width: 170px;
   width: 170px;
+  max-width: 170px;
   height: 240px;
+  min-height: 240px;
+  color: #fff;
   object-fit: cover;
 `;
