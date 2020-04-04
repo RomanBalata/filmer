@@ -21,6 +21,12 @@ class Menu extends PureComponent {
     };
   }
 
+  componentDidMount() {
+    const { history } = this.props;
+    const initialIndex = genres.findIndex((genre) => history?.location.pathname.includes(genre));
+    this.setState({ focusedIndex: initialIndex !== -1 ? initialIndex : 0 });
+  }
+
   handleArrowUp = () => {
     const { focusedIndex } = this.state;
     const { push } = this.props;
